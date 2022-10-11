@@ -46,7 +46,7 @@ namespace Generics.Packages.Walking
 
         #region Utils
        
-        public virtual bool SetGoal(Vector3 destination, Action onArrive = null)
+        public virtual bool SetGoal(Vector3 destination, Action onArrive = null, bool checkArrive = true)
         {
             if (!_moveBehaviour.IsDestinationValid(destination))
             {
@@ -58,7 +58,7 @@ namespace Generics.Packages.Walking
 #if DEBUG_MODE
             GizmosHelper.DrawSphere(new SphereGizmoModel($"Destination_{this.GetInstanceID()}", destination, new Color(1f, 0f, 0f, 0.5f), 0.2f));
 #endif
-            if (Vector3.Distance(destination, transform.position) <= _arriveThreshold)
+            if (checkArrive && Vector3.Distance(destination, transform.position) <= _arriveThreshold)
             {
                 if (onArrive != null || _trackArrive)
                 {
@@ -70,6 +70,7 @@ namespace Generics.Packages.Walking
 
 
             Direction = (_destination - transform.position).normalized;
+            //Debug.Log($"Direction: {Direction}");
 
             if (_arriveTracker != null)
             {
@@ -113,16 +114,16 @@ namespace Generics.Packages.Walking
 
         public void SetMoveBehaviour(WalkingMoveBehaviour moveBehaviour)
         {
-            _moveBehaviour.enabled = false;
+            _moveBehaviour.SetEnable(false, "ActiveMethod");
             _moveBehaviour = moveBehaviour;
-            _moveBehaviour.enabled = true;
+            _moveBehaviour.SetEnable(true, "ActiveMethod");
         }
 
         public void SetRotationBehaviour(WalkingRotationBehaviour rotationBehaviour)
         {
-            _rotationBehaviuor.enabled = false;
+            _rotationBehaviuor.SetEnable(false, "ActiveMethod");
             _rotationBehaviuor = rotationBehaviour;
-            _rotationBehaviuor.enabled = true;
+            _rotationBehaviuor.SetEnable(true, "ActiveMethod");
         }
 
         public void SetArriveThreshold(float arriveThreshold)

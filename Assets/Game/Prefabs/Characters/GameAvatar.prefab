@@ -53,16 +53,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2733041045349504423, guid: 2d85ce8ec01bfb24c98d2593c995d47a, type: 3}
       propertyPath: m_Name
-      value: Walker_IdleArcade
+      value: GameAvatar
       objectReference: {fileID: 0}
     - target: {fileID: 8064177208838900400, guid: 2d85ce8ec01bfb24c98d2593c995d47a, type: 3}
       propertyPath: _moveBehaviour
       value: 
       objectReference: {fileID: 6942500811049009898}
     - target: {fileID: 8064177208838900400, guid: 2d85ce8ec01bfb24c98d2593c995d47a, type: 3}
+      propertyPath: _arriveThreshold
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064177208838900400, guid: 2d85ce8ec01bfb24c98d2593c995d47a, type: 3}
       propertyPath: _rotationBehaviuor
       value: 
-      objectReference: {fileID: 3592004268472306388}
+      objectReference: {fileID: 7414879653379382526}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d85ce8ec01bfb24c98d2593c995d47a, type: 3}
 --- !u!95 &3986194667239744920 stripped
@@ -84,7 +88,7 @@ CharacterController:
   m_GameObject: {fileID: 3986194667249190622}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.25
@@ -124,6 +128,45 @@ MonoBehaviour:
   _baseComponent: {fileID: 9031351976231410121}
   _animator: {fileID: 3986194667239744920}
   _runAnimationId: Walking
+--- !u!195 &2786123063280179019
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986194667249190622}
+  m_Enabled: 0
+  m_AgentTypeID: 0
+  m_Radius: 0.25
+  m_Speed: 2
+  m_Acceleration: 100
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &4101315728430205756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986194667249190622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23355d860b8d6a948ba196ca480e7aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSRTarget: 0
+  _extensions: []
+  _walkingBehaviour: {fileID: 9031351976231410121}
+  _inputBehaviour: {fileID: 593069895359559513}
+  _agentMovement: {fileID: 0}
 --- !u!114 &6942500811049009898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,15 +182,16 @@ MonoBehaviour:
   IsSRTarget: 0
   _baseComponent: {fileID: 9031351976231410121}
   _characterController: {fileID: 3806768021218217461}
-  _speed: 0
---- !u!114 &3592004268472306388
+  _enableControllerOnStateChange: 1
+  _speed: 2
+--- !u!114 &7414879653379382526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3986194667249190622}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 133ef69168f47e643a62a6581a2f0af7, type: 3}
   m_Name: 
@@ -158,6 +202,23 @@ MonoBehaviour:
   _rotationLerpSpeed: 10
   _useRigidbody: 0
   _rigidbody: {fileID: 0}
+--- !u!114 &7443747965270705927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986194667249190622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c340b1dfe250fd24b83f55077ff65859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSRTarget: 0
+  _baseComponent: {fileID: 9031351976231410121}
+  _agent: {fileID: 2786123063280179019}
+  _enableAgentOnStateChange: 1
+  _arriveThreshold: 0
 --- !u!114 &9031351976231410121 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8064177208838900400, guid: 2d85ce8ec01bfb24c98d2593c995d47a, type: 3}

@@ -8,6 +8,10 @@ namespace Generics.Packages.Walking
     {
         [SerializeField] private NavMeshAgent _agent;
 
+        [Header("Parameters")]
+        [SerializeField] private bool _enableAgentOnStateChange;
+        [SerializeField] private float _arriveThreshold;
+
         private NavMeshPath _path;
         private bool _updateDestination;
 
@@ -36,6 +40,7 @@ namespace Generics.Packages.Walking
         {
             base.OnEnable();
 
+            _agent.enabled = true;
             _updateDestination = true;
             BaseComponent.DestinationChanged += OnDestinationChanged;
         }
@@ -47,6 +52,7 @@ namespace Generics.Packages.Walking
             _agent.SetDestination(_agent.transform.position);
             BaseComponent.DestinationChanged -= OnDestinationChanged;
             _updateDestination = false;
+            _agent.enabled = false;
         }
 
         #endregion

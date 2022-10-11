@@ -49,7 +49,7 @@ namespace Generics.Packages.Walking
             }
 
             var destination = _walker.transform.position + movement;
-            _walker.SetGoal(destination);
+            _walker.SetGoal(destination, checkArrive: false);
         }
 
         #endregion
