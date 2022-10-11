@@ -58,7 +58,7 @@ namespace Generics.Packages.Walking
 
         protected virtual void OnJoystickMovePerformed(CallbackContext context)
         {
-            _walker.enabled = true;
+            _walker.SetEnable(true);
             CursorMovement = context.ReadValue<Vector2>();
             Touching = true;
 
@@ -66,7 +66,7 @@ namespace Generics.Packages.Walking
 
         protected virtual void OnJoystickMoveCanceled(CallbackContext context)
         {
-            _walker.enabled = false;
+            _walker.SetEnable(false);
             CursorMovement = Vector2.zero;
             Touching = false;
         }
