@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a723470b85f569244888ba76314c001f, type: 3}
+  m_Name: AssetReferences
+  m_EditorClassIdentifier: 
+  Assets:
+    m_keys:
+    - Button_AdOffer
+    - Button_CurrencyOffer
+    - Button_IapOffer
+    - Button_UrlOffer
+    - Button
+    - GenericCost
+    - ScrollerHorizontal
+    - ScrollerVertical
+    - ProgressBarFill
+    - Navigation
+    - GameProfileController
+    - GizmosHelper
+    - UpgradeController
+    - Panels
+    - Popups
+    - Overlays
+    - LoadingOverlay
+    - ForceUpdateOverlay
+    - Text
+    - Text_Outline
+    - Text_Shadow
+    - Text_NumberDisplayer
+    - CurrencyElement_Right
+    - CurrencyElement_Left
+    - InGamePanel
+    - MenuPanel
+    - GameOverPanel
+    - CustomizationPanel
+    - Customization
+    - KeyController
+    - TextureExtensions
+    - UnlockLootboxPanel
+    - ThumbnailRenderController
+    - ProgressiveRewardController
+    - ThumbnailRenderElement
+    - ProgressiveRewardPanel
+    - ProgressBarSlide
+    - ExtensionTemplate
+    - BehaviourTemplate
+    - ElementTemplate
+    - ElementBehaviourTemplate
+    - SRViewOptions
+    - SROptionEnableToggle
+    - SROptionActiveToggle
+    - TargetIndicatorController
+    - TargetIndicatorContainer
+    - VictoryPanel
+    - LosePanel
+    - InputController
+    - FpsCounter
+    - InventoryController
+    - SceneController
+    - CustomizationButton
+    - ComboController
+    - ButtonDecision
+    - ActivationScaleAnimation
+    - DeactivationScaleAnimation
+    - OptionController
+    - DpiHelper
+    - DistanceTrackingController
+    - RemainingIndicator_Single
+    - RemainingRequirementElement
+    - Stack_Single
+    - Stack_Grid
+    - TutorialTrigger
+    - TutorialTriggerDelayed
+    - TutorialTriggerJob
+    - SwerveTutorial
+    - AiContentModel
+    - AiConditionModel
+    - AiBehaviourModel
+    - AiStateModel
+    m_values:
+    - {fileID: 4660986156275434127, guid: 07518d7e45ed46b4eb673f58362507d1, type: 3}
+    - {fileID: 5250508722950852082, guid: 7c9fbbe645f4a9940aba972f9e789d62, type: 3}
+    - {fileID: 3504434524023954410, guid: 3716836541ce1fe4daf11b6edb61c9e4, type: 3}
+    - {fileID: 5055094058690718251, guid: 11ff0b198ba8c3b43b7d26c5acec7dde, type: 3}
+    - {fileID: 5379903794592899747, guid: 03a2aa0b82a61254395aa3d017935839, type: 3}
+    - {fileID: 2870450110173432121, guid: c7e46c78fa72e1941a83ad6a759cc909, type: 3}
+    - {fileID: 1666027004713563222, guid: 5ae92d6d237873249aaf95d38a1af65a, type: 3}
+    - {fileID: 7125649751337393536, guid: c9f193e36cf89f3439869c9bb1983d81, type: 3}
+    - {fileID: 7334761360144803706, guid: e9720e4e4d3a2494690e7e52e923bcd5, type: 3}
+    - {fileID: 3299911649323561047, guid: 9bbf12b468fa6f842a56cb040081a473, type: 3}
+    - {fileID: 6911305232866702660, guid: abdcad813d91a96458061fda0b7890dd, type: 3}
+    - {fileID: 8612231870440180417, guid: 65b41ed1f5cfd2d4f813b347b0853a99, type: 3}
+    - {fileID: 3110232155846674846, guid: 59e0863c53e06ca408decbbdffb602b1, type: 3}
+    - {fileID: 6085351561486538456, guid: bcf8055d79dbf714b839cb77a04e1dcd, type: 3}
+    - {fileID: 5029927850022696697, guid: 738da3b26af1d1441a64918a1d872dfe, type: 3}
+    - {fileID: 2425888326086552443, guid: 74ae921aa216cac4991f29da8ddc12d9, type: 3}
+    - {fileID: 3003513340655309066, guid: 30ff530bd79b504488479e8b5db0ab62, type: 3}
+    - {fileID: 1271154193459194735, guid: aa543abcf83b4b54790c374ba044dd35, type: 3}
+    - {fileID: 773420590904643990, guid: 1900f4050e9680c4a8f3f1d4061281a1, type: 3}
+    - {fileID: 2335265297496165335, guid: 4ae5fcb363e12264c9a3db6c5baf47ac, type: 3}
+    - {fileID: 2342775258103921616, guid: 8e779c757fa4c434d83555389d8d8f8e, type: 3}
+    - {fileID: 8645328561008028668, guid: e687658a035a1544ba716874284fd686, type: 3}
+    - {fileID: 4198582116092369478, guid: 620dd7b8902842d49b2136f0d46618f4, type: 3}
+    - {fileID: 722901497930048776, guid: 617de13b3e673ed47a8b9e3dd1ee3e6d, type: 3}
+    - {fileID: 8684511549831248410, guid: d1e95bf6453a2ef47b945e5a2a74bfbc, type: 3}
+    - {fileID: 4670999663649253082, guid: 44e31d1554ed86d44a92539680b4135c, type: 3}
+    - {fileID: 5512013008930379695, guid: 72c8cb69b81c9624796a62cfe34eff8d, type: 3}
+    - {fileID: 1874280606457993907, guid: 7248abd15d3da4d4fa37a66920a86bbb, type: 3}
+    - {fileID: 6615571626572840539, guid: e19dc7a4b65a1b540a82b00b98f352d4, type: 3}
+    - {fileID: 6344847763382515791, guid: 3faa4492d168c374e93bd9c006a26c52, type: 3}
+    - {fileID: 4409612145606953563, guid: 49e7c893749779e46b608d3a9e0a3f9d, type: 3}
+    - {fileID: 6930231065429343725, guid: 1a019c6ace54dfc40a5cdde1badf3b86, type: 3}
+    - {fileID: 6824547145034526436, guid: 00e9449be820ef74f8bb18a1f8c18da6, type: 3}
+    - {fileID: 2975745680945206564, guid: 036937690a92d0d45a94d12dc61f10b1, type: 3}
+    - {fileID: 204977618553782962, guid: 33aa62354785daf4fa0e7ce88facd4db, type: 3}
+    - {fileID: 6595278271115551313, guid: 1c59774ef2efb1543b13a09c56ce9924, type: 3}
+    - {fileID: 1456129394582114706, guid: ba2228e070d4996418f4ce7315e12093, type: 3}
+    - {fileID: 4900000, guid: a163b4abc8a6aed468fe09403de37540, type: 3}
+    - {fileID: 4900000, guid: 9a929c4e14611ca4b917722571512c1c, type: 3}
+    - {fileID: 4900000, guid: 0f8d643d133cc3946894326612bb4df2, type: 3}
+    - {fileID: 4900000, guid: 41deac46d558cb74b99b9655f58fffaa, type: 3}
+    - {fileID: 4900000, guid: ede5783715567da4f84b89ce1a3bf54d, type: 3}
+    - {fileID: 4900000, guid: 650292fffefaf914bbbd871194562700, type: 3}
+    - {fileID: 4900000, guid: 07d58121d4da1fa4e8b996919899b952, type: 3}
+    - {fileID: 1378462680834649762, guid: 9139eb41bb04ccd40b18056b489cefca, type: 3}
+    - {fileID: 4344810701265185907, guid: 63de36025429e1445b41cb0bbd3ce761, type: 3}
+    - {fileID: 547999510126825358, guid: c75627f62c8772841adad72aad6026b6, type: 3}
+    - {fileID: 77990822273665235, guid: e53c516054e0c17459cbe615cda80755, type: 3}
+    - {fileID: 3666648480379842344, guid: 3bdd3b2a659adb54989577f0a4598113, type: 3}
+    - {fileID: 6044963693557992902, guid: 097cb69fb15775b4dbcd4bef566e7f8b, type: 3}
+    - {fileID: 884242563880382684, guid: 12339d10f6efd3b4caa29fc780207857, type: 3}
+    - {fileID: 2478503879257404019, guid: 8b85659d951cd144e8e1a56ce7c085e2, type: 3}
+    - {fileID: 7034457112225694268, guid: 9c2076bf42432c54a9f97323305c40cd, type: 3}
+    - {fileID: 1632207663526758071, guid: 09c25450ceb502b488f964926c464a8e, type: 3}
+    - {fileID: 1888689624438596917, guid: 3919eaba8884b2349ab5c112e4cf880c, type: 3}
+    - {fileID: 11400000, guid: 25e73b4a11c326f4e957ba2dbb94e14c, type: 2}
+    - {fileID: 11400000, guid: dd4128699a55d74488cb6b20c2c488a9, type: 2}
+    - {fileID: 135820682657169844, guid: 4206392a6cbf1124fb091f3ae893c982, type: 3}
+    - {fileID: 2205630364873588634, guid: a0709c866e193e34c824b06063b24eb1, type: 3}
+    - {fileID: 7790218787742462047, guid: 0767f292c3e6e074cadf4b9e115b23a0, type: 3}
+    - {fileID: 1077021702052960272, guid: fec3b8327c9b42b4cbf0e0c62d99bde8, type: 3}
+    - {fileID: 167690452412168869, guid: 580bb197194a5a64992ec048f877f563, type: 3}
+    - {fileID: 1591269513991150889, guid: a4365c7b0a6f5e04eb1f86fddc16d76f, type: 3}
+    - {fileID: 3623883132689306168, guid: 07b9d5a81a2c1b64b8fcd9a08b74b15e, type: 3}
+    - {fileID: 8689886533726295909, guid: dbd572408224bcf43a467a2db54498f5, type: 3}
+    - {fileID: 4875803595234630672, guid: 0c2d3094b45a0f746ac26e309b0d2c75, type: 3}
+    - {fileID: 5049562539632949375, guid: 16081cde34655a542b8fefa8670546ef, type: 3}
+    - {fileID: 4685473051631778475, guid: db9163d29a39ec04084a37a31c9e08bd, type: 3}
+    - {fileID: 4900000, guid: 1e035b864b2a6b84ab94180d6de6a143, type: 3}
+    - {fileID: 4900000, guid: 7c8a7a9b30bc48c45aeac9d1f3d64b03, type: 3}
+    - {fileID: 4900000, guid: cbd01ca2e4f2d4c4ab3d32c865adf870, type: 3}
+    - {fileID: 4900000, guid: 6b2722cd5d251dc4396925eba1ba7d07, type: 3}
