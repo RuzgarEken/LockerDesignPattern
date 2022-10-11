@@ -357,7 +357,7 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 1912396979763766941, guid: 023a7084b5fd2b242b2c616747d5c450, type: 3}
   _muzzlePoint: {fileID: 4297980138063330670}
   _shootDestinationOffset: {x: 0, y: 1, z: 0}
-  _shootingInterval: 2
+  _shootingInterval: 1.5
   _shootingForce: 2
   _shootingForceMode: 2
 --- !u!114 &2716259000031700870

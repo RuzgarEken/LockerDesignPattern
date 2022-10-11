@@ -2,6 +2,7 @@ using Essentials.Extensions;
 using Generics.Behaviours;
 using Generics.Packages.Walking;
 using UnityEngine;
+using DG.Tweening;
 
 namespace Game.Behaviours
 {
@@ -12,12 +13,10 @@ namespace Game.Behaviours
         [SerializeField] private WalkingBehaviour _walkingBehaviour;
 
         [Header("Parameters")]
-        [SerializeField] private ForceMode _forceMode;
-        [SerializeField] private float _pushDecayThreshold;
-        [SerializeField] private float _pushDecayTime = 2f;
+        [SerializeField] private float _forceSpeed;
 
-        private Coroutine _pushDecayTracker;
         private Vector3 _forceVec;
+        private Tween _tween;
 
         #region Unity Methods
 
@@ -25,27 +24,16 @@ namespace Game.Behaviours
         {
             base.OnEnable();
 
-            Debug.Log("Push Enabled");
-
             _walkingBehaviour.SetEnable(false, "Push");
-            _rigidbody.isKinematic = false;
-            _rigidbody.useGravity = true;
 
-            PushInternal();
+            this.DoAfterFixedUpdate(PushInternal);
         }
 
         protected override void OnDisable()
         {
             base.OnDisable();
 
-            _rigidbody.isKinematic = true;
-            _rigidbody.useGravity = false;
-            _rigidbody.velocity = Vector3.zero;
-            _rigidbody.angularVelocity = Vector3.zero;
             _walkingBehaviour.SetEnable(true, "Push");
-
-            StopCoroutine(_pushDecayTracker);
-            _pushDecayTracker = null;
         }
 
         #endregion
@@ -72,23 +60,21 @@ namespace Game.Behaviours
 
         private void PushInternal()
         {
-            Debug.Log("Push Internal");
+            if (_tween != null)
+            {
+                _tween.Kill();
+            }
 
-            _rigidbody.AddForce(_forceVec, _forceMode);
-
-            _pushDecayTracker ??=
-                this.DoAfterTime(_pushDecayTime, () =>
-                {
-                    _pushDecayTracker =
-                        this.DoAfterCondition(
-                            () => _rigidbody.velocity.magnitude < _pushDecayThreshold,
-                            () =>
-                            {
-                                Debug.Log("Push Decayed");
-                                SetEnable(false);
-                            }
-                        );
-                });
+            _tween = 
+                transform
+                    .DOBlendableMoveBy(_forceVec, _forceSpeed)
+                    .SetRelative()
+                    .SetSpeedBased()
+                    .OnComplete(() =>
+                    {
+                        _tween = null;
+                        SetEnable(false);
+                    });
         }
 
         #endregion

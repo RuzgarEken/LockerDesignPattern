@@ -199,8 +199,7 @@ MonoBehaviour:
   IsSRTarget: 0
   _rigidbody: {fileID: 7109374538396999484}
   _walkingBehaviour: {fileID: 9031351976231410121}
-  _forceMode: 1
-  _pushDecayThreshold: 0.001
+  _forceSpeed: 2
 --- !u!114 &4101315728430205756
 MonoBehaviour:
   m_ObjectHideFlags: 0

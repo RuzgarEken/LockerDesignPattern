@@ -6,7 +6,6 @@ namespace Game.Behaviours
     public class CollisionPushBehaviour : MonoBehaviour
     {
         [SerializeField] private float _pushForce;
-        [SerializeField] private float _upVector;
 
         #region Unity Methods
 
@@ -29,15 +28,13 @@ namespace Game.Behaviours
             var avatar = collider.attachedRigidbody.GetComponent<GameAvatarEntity>();
             if (!avatar) return;
 
-            Debug.Log("Collision");
-
             var vector =
                 Vector3.ProjectOnPlane(
                     (avatar.transform.position - transform.position).normalized,
                     Vector3.up
                 );
 
-            var pushVector = Quaternion.Euler(_upVector, 0f, 0f) * vector * _pushForce;
+            var pushVector = vector * _pushForce;
 
             avatar.PushBehaviour.Push(pushVector);
             Destroy(gameObject);
