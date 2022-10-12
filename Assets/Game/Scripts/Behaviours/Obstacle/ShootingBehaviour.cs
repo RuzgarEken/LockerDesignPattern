@@ -46,9 +46,8 @@ namespace Game.Behaviours
 
         private void OnTargetChanged(ComponentBase target)
         {
-            if (_shootingRoutine != null) StopCoroutine(_shootingRoutine);
-
-            if (target == null)
+            if (target == null
+             || _shootingRoutine != null)
             {
                 return;
             }
@@ -62,13 +61,23 @@ namespace Game.Behaviours
 
         private void Shoot()
         {
+            if (_targetingBehaviour.Target == null) return;
+
             var targetPos = _targetingBehaviour.Target.transform.position + _shootDestinationOffset;
             var dir = (targetPos - _muzzlePoint.position).normalized;
 
             var projectile = Instantiate(_projectilePrefab, _muzzlePoint.position, Quaternion.identity);
             projectile.Set(dir);
 
-            _shootingRoutine = this.DoAfterTime(_shootingInterval, Shoot);
+            _shootingRoutine = 
+                this.DoAfterTime(
+                    _shootingInterval, 
+                    () =>
+                    {
+                        _shootingRoutine = null;
+                        Shoot();
+                    }
+                );
         }
 
         #endregion

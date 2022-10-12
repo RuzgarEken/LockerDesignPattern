@@ -11,6 +11,8 @@ namespace Game.Behaviours
 
         private void OnCollisionEnter(Collision collision)
         {
+            if (!collision.rigidbody) return;
+
             var avatar = collision.rigidbody.GetComponent<GameAvatarEntity>();
             if (!avatar) return;
 
@@ -20,11 +22,12 @@ namespace Game.Behaviours
             var pushVector = Vector3.ProjectOnPlane(-contact.normal, Vector3.up) * _pushForce;
 
             avatar.PushBehaviour.Push(pushVector);
-            Destroy(gameObject);
         }
 
         private void OnTriggerEnter(Collider collider)
         {
+            if (!collider.attachedRigidbody) return;
+
             var avatar = collider.attachedRigidbody.GetComponent<GameAvatarEntity>();
             if (!avatar) return;
 
@@ -37,7 +40,6 @@ namespace Game.Behaviours
             var pushVector = vector * _pushForce;
 
             avatar.PushBehaviour.Push(pushVector);
-            Destroy(gameObject);
         }
 
         #endregion

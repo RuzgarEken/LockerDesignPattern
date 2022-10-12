@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f0d09e71f90b1e4fa5cdacd1b1831ce, type: 2}
+  - {fileID: 2100000, guid: 42d2a86e504834e4c87fc1ff15ce5588, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -189,7 +189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f0d09e71f90b1e4fa5cdacd1b1831ce, type: 2}
+  - {fileID: 2100000, guid: 42d2a86e504834e4c87fc1ff15ce5588, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -336,8 +336,6 @@ MonoBehaviour:
   _muzzlePoint: {fileID: 384331099852931043}
   _shootDestinationOffset: {x: 0, y: 1, z: 0}
   _shootingInterval: 4.5
-  _shootingForce: 0
-  _shootingForceMode: 0
 --- !u!114 &-2901699848661945656
 MonoBehaviour:
   m_ObjectHideFlags: 0

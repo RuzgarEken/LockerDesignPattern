@@ -10,6 +10,8 @@ namespace Game.Behaviours
 
         private void OnTriggerEnter(Collider other)
         {
+            if (!other.attachedRigidbody) return;
+
             var avatar = other.attachedRigidbody.GetComponent<GameAvatarEntity>();
             if (!avatar) return;
 
