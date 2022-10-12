@@ -9,6 +9,7 @@ namespace Game.Behaviours
     public class StaminaBehaviour : ComponentBase
     {
         public event Action<float> StaminaChanged;
+        public event Action<bool> CanUseStateChanged;
 
         [SerializeField] private WalkingBehaviour _walkingBehaviour;
 
@@ -62,10 +63,13 @@ namespace Game.Behaviours
             if (_stamina == 0f)
             {
                 _walkingBehaviour.SetEnable(false, "Stamina");
+
+                CanUseStateChanged?.Invoke(false);
             }
             else if (!canMove && _stamina >= _minStaminaToMove)
             {
                 _walkingBehaviour.SetEnable(true, "Stamina");
+                CanUseStateChanged?.Invoke(true);
             }
 
             StaminaChanged?.Invoke(_stamina);
