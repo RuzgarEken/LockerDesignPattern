@@ -11,11 +11,13 @@ namespace Game.Behaviours
         [SerializeField] private WalkingInput_Joystick _inputBehaviour;
         [SerializeField] private WalkingMove_NavMeshAgent _agentMovement;
         [SerializeField] private PushBehaviour _pushBehaviour;
+        [SerializeField] private StunBehaviour _stunBehaviour;
 
         public WalkingBehaviour WalkingBehaviour => _walkingBehaviour;
         public WalkingInput_Joystick InputBehaviour => _inputBehaviour;
         public WalkingMove_NavMeshAgent AgentMoveBehaviour => _agentMovement;
         public PushBehaviour PushBehaviour => _pushBehaviour;
+        public StunBehaviour StunBehaviour => _stunBehaviour;
 
     }
 

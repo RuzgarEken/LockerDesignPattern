@@ -197,7 +197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSRTarget: 0
-  _rigidbody: {fileID: 7109374538396999484}
   _walkingBehaviour: {fileID: 9031351976231410121}
   _forceSpeed: 2
 --- !u!114 &4101315728430205756
@@ -218,6 +217,7 @@ MonoBehaviour:
   _inputBehaviour: {fileID: 593069895359559513}
   _agentMovement: {fileID: 7443747965270705927}
   _pushBehaviour: {fileID: 3689969624625113861}
+  _stunBehaviour: {fileID: 8780801340154911339}
 --- !u!114 &6942500811049009898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +270,20 @@ MonoBehaviour:
   _agent: {fileID: 2786123063280179019}
   _enableAgentOnStateChange: 1
   _arriveThreshold: 0
+--- !u!114 &8780801340154911339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986194667249190622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6424f01c52f810745b4f561ef7abb505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSRTarget: 0
+  _walkingBehaviour: {fileID: 9031351976231410121}
 --- !u!114 &9031351976231410121 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8064177208838900400, guid: 2d85ce8ec01bfb24c98d2593c995d47a, type: 3}
