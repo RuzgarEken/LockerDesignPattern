@@ -26,7 +26,7 @@ namespace Game.Behaviours
 
             //disable input to animate avatar entry
             _avatar.InputBehaviour.SetEnable(false, "EntryAnimation");
-
+            _avatar.StaminaBehaviour.SetEnable(false, "EntryAnimation");
             
             _defaultMoveBehaviour = _avatar.WalkingBehaviour.MoveBehaviour; //cache default behaviour
 
@@ -44,6 +44,7 @@ namespace Game.Behaviours
             _avatar.WalkingBehaviour.SetMoveBehaviour(_defaultMoveBehaviour);
             _avatar.WalkingBehaviour.SetEnable(false); //movement completed disable until next movement input
             _avatar.InputBehaviour.SetEnable(true, "EntryAnimation");
+            _avatar.StaminaBehaviour.SetEnable(true, "EntryAnimation");
             _doorAnimator.SetBool("Open", false);
         }
 

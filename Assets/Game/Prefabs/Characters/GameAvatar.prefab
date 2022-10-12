@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 6942500811049009898}
     - target: {fileID: 8064177208838900400, guid: 2d85ce8ec01bfb24c98d2593c995d47a, type: 3}
       propertyPath: _arriveThreshold
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8064177208838900400, guid: 2d85ce8ec01bfb24c98d2593c995d47a, type: 3}
       propertyPath: _rotationBehaviuor
@@ -231,9 +231,28 @@ MonoBehaviour:
   _walkingBehaviour: {fileID: 9031351976231410121}
   _inputBehaviour: {fileID: 593069895359559513}
   _agentMovement: {fileID: 7443747965270705927}
+  _staminaBehaviour: {fileID: 5954116555893239150}
   _pushBehaviour: {fileID: 3689969624625113861}
   _stunBehaviour: {fileID: 8780801340154911339}
   _pullBehaviour: {fileID: 709245558941434964}
+--- !u!114 &5954116555893239150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986194667249190622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480c0b4e4095f6c4aba41b9da210ad95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSRTarget: 0
+  _walkingBehaviour: {fileID: 9031351976231410121}
+  _maxStamina: 10
+  _minStaminaToMove: 3
+  _staminaDecreaseSpeed: 2
+  _staminaIncreaseSpeed: 2
 --- !u!114 &6942500811049009898
 MonoBehaviour:
   m_ObjectHideFlags: 0

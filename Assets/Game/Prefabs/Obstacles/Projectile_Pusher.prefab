@@ -75,20 +75,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pushForce: 1.5
---- !u!114 &1639010055608587370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3146465961625035917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd78672f0f7b3a64c973a70d36b4d3cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsSRTarget: 0
-  _delay: 5
 --- !u!114 &946957243884872216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,7 +89,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsSRTarget: 0
   _rigidbody: {fileID: 3146465961625035919}
-  _force: 2
+  _force: 3
+--- !u!114 &1639010055608587370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3146465961625035917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd78672f0f7b3a64c973a70d36b4d3cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSRTarget: 0
+  _delay: 5
 --- !u!54 &3146465961625035919 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1912396979763766941, guid: 023a7084b5fd2b242b2c616747d5c450, type: 3}
