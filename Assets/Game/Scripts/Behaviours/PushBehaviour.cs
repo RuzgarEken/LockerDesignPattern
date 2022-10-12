@@ -9,7 +9,6 @@ namespace Game.Behaviours
 
     public class PushBehaviour : ComponentBase
     {
-        [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private WalkingBehaviour _walkingBehaviour;
 
         [Header("Parameters")]
@@ -34,6 +33,12 @@ namespace Game.Behaviours
             base.OnDisable();
 
             _walkingBehaviour.SetEnable(true, "Push");
+
+            if (_tween != null)
+            {
+                _tween.Kill();
+                _tween = null;
+            }
         }
 
         #endregion

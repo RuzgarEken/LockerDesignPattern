@@ -146,6 +146,21 @@ MonoBehaviour:
   IsSRTarget: 0
   _walker: {fileID: 9031351976231410121}
   _allignWithCameraY: 1
+--- !u!114 &709245558941434964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986194667249190622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c5d7684887d02c43aefccbd9ace5d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSRTarget: 0
+  _walkingBehaviour: {fileID: 9031351976231410121}
+  _pullLerpSpeed: 50
 --- !u!114 &2433867828616635960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +233,7 @@ MonoBehaviour:
   _agentMovement: {fileID: 7443747965270705927}
   _pushBehaviour: {fileID: 3689969624625113861}
   _stunBehaviour: {fileID: 8780801340154911339}
+  _pullBehaviour: {fileID: 709245558941434964}
 --- !u!114 &6942500811049009898
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,14 +8,12 @@ namespace Game.Behaviours
     public class ShootingBehaviour : ComponentBase
     {
         [SerializeField] private TargetingBehaviour _targetingBehaviour;
-        [SerializeField] private Rigidbody _projectilePrefab;
+        [SerializeField] private ProjectileBehaviour _projectilePrefab;
         [SerializeField] private Transform _muzzlePoint;
 
         [Header("Parameters")]
         [SerializeField] private Vector3 _shootDestinationOffset = Vector3.up;
         [SerializeField] private float _shootingInterval;
-        [SerializeField] private float _shootingForce;
-        [SerializeField] private ForceMode _shootingForceMode;
 
         private Coroutine _shootingRoutine;
 
@@ -55,7 +53,7 @@ namespace Game.Behaviours
                 return;
             }
 
-            _shootingRoutine = this.DoAfterTime(_shootingInterval, Shoot);
+            Shoot();
         }
 
         #endregion
@@ -68,7 +66,7 @@ namespace Game.Behaviours
             var dir = (targetPos - _muzzlePoint.position).normalized;
 
             var projectile = Instantiate(_projectilePrefab, _muzzlePoint.position, Quaternion.identity);
-            projectile.AddForce(dir * _shootingForce, _shootingForceMode);
+            projectile.Set(dir);
 
             _shootingRoutine = this.DoAfterTime(_shootingInterval, Shoot);
         }
