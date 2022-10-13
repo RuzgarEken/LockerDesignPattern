@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSRTarget: 0
-  _pullDuration: 0.75
+  _pullDuration: 0.5
 --- !u!114 &5277263513400798875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,5 +234,4 @@ MonoBehaviour:
   _range: 10
   _duration: 1.5
   _shootEase: 8
-  _pullSpeed: 3
   _pullEase: 1

@@ -22,6 +22,7 @@ namespace Game.Behaviours
         private float _stamina;
         private float _deltaStamina;
 
+        public float Stamina => _stamina;
         public float MaxStamina => _maxStamina;
 
         #region Unity Methods
@@ -71,6 +72,17 @@ namespace Game.Behaviours
                 _walkingBehaviour.SetEnable(true, "Stamina");
                 CanUseStateChanged?.Invoke(true);
             }
+
+            StaminaChanged?.Invoke(_stamina);
+        }
+
+        #endregion
+
+        #region Utils
+
+        public void SetStamina(float stamina)
+        {
+            _stamina = stamina;
 
             StaminaChanged?.Invoke(_stamina);
         }
