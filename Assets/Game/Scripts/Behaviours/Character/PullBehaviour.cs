@@ -81,6 +81,12 @@ namespace Game.Behaviours
 
         private void PullInternal()
         {
+            if (!_puller)
+            {
+                SetEnable(false);
+                return;
+            }
+
             _offsetToSource = (_puller.position - transform.position);
 
             if (_pullRoutine != null) StopCoroutine(_pullRoutine);

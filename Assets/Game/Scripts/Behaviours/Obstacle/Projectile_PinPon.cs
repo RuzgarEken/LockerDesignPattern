@@ -11,17 +11,19 @@ namespace Game.Behaviours
         [SerializeField] private Ease _shootEase;
 
         [Header("Pull")]
-        [SerializeField] private float _pullSpeed;
         [SerializeField] private Ease _pullEase;
 
         private Tween _tween;
         private Vector3 _startingPos;
+        private bool _pulling;
 
         #region Initialization
 
         public override void Set(Vector3 direction)
         {
             _startingPos = transform.position;
+
+            _pulling = false;
 
             _tween = 
                 transform
@@ -37,15 +39,21 @@ namespace Game.Behaviours
 
         private void OnTriggerEnter(Collider other)
         {
+            if (_pulling) return;
+
             if (_tween != null)
             {
                 _tween.Kill();
             }
 
+            _pulling = true;
+
+            var distance = Vector3.Distance(_startingPos, transform.position);
+            var duration = _duration * distance / _range;
+
             transform
-                .DOMove(_startingPos, _pullSpeed)
-                .SetEase(_pullEase)
-                .SetSpeedBased();
+                .DOMove(_startingPos, duration)
+                .SetEase(_pullEase);
         }
 
         #endregion
